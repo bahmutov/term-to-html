@@ -2,7 +2,7 @@ jobs:
   build:
     executor:
       name: node/default
-      tag: '10.4'
+      tag: '12'
     steps:
       - checkout
       - node/with-cache:

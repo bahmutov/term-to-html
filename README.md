@@ -10,6 +10,8 @@ You can pipe the output through `term-to-html` to create equivalent HTML file. S
 
 ![html](images/html.png)
 
+The output could be used to do [visual testing against CLI output](https://glebbahmutov.com/blog/visual-diffing-for-CLI-apps/)
+
 ## Use
 
 ```shell
