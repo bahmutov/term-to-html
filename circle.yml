@@ -12,6 +12,7 @@ jobs:
       - store_artifacts:
           path: mocha.html
       - run: npm run e2e
+      - run: npm run semantic-release
 orbs:
   node: circleci/node@1.1
 version: 2.1
