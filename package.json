@@ -4,7 +4,7 @@
   "description": "Stream terminal output with ansi codes into nicely formatted HTML",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha spec.js"
   },
   "repository": {
     "type": "git",
@@ -30,6 +30,8 @@
   },
   "homepage": "https://github.com/bahmutov/term-to-html#readme",
   "devDependencies": {
+    "cli-table3": "0.5.1",
+    "mocha": "7.0.1",
     "prettier": "1.19.1"
   },
   "dependencies": {
