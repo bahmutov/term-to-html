@@ -4,7 +4,8 @@
   "description": "Stream terminal output with ansi codes into nicely formatted HTML",
   "main": "index.js",
   "scripts": {
-    "test": "mocha spec.js"
+    "test": "mocha spec.js",
+    "e2e": "mocha --timeout 30000 e2e.js"
   },
   "repository": {
     "type": "git",
@@ -31,6 +32,7 @@
   "homepage": "https://github.com/bahmutov/term-to-html#readme",
   "devDependencies": {
     "cli-table3": "0.5.1",
+    "execa": "4.0.0",
     "mocha": "7.0.1",
     "prettier": "1.19.1",
     "snap-shot-it": "7.9.2"

@@ -11,6 +11,7 @@ jobs:
       - run: FORCE_COLOR=2 npx mocha spec.js --reporter spec | bin/term-to-html.js > mocha.html
       - store_artifacts:
           path: mocha.html
+      - run: npm run e2e
 orbs:
   node: circleci/node@1.1
 version: 2.1
