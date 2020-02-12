@@ -7,6 +7,8 @@ it('works', () => {
       FORCE_COLOR: 2,
     },
   }).then(result => {
-    snapshot('generated html', result.stdout)
+    // replace Mocha's time duration warnings with same value
+    const text = result.stdout.replace(/\(10\d\dms\)/g, '(1000ms)')
+    snapshot('generated html', text)
   })
 })

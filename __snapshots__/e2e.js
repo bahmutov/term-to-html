@@ -22,8 +22,8 @@ exports['generated html'] = `
 
 
   example
-  <span style="color:#0A0">  ✓</span><span style="color:#555"> works A</span><span style="color:#A00"> (1004ms)</span>
-  <span style="color:#0A0">  ✓</span><span style="color:#555"> works B</span><span style="color:#A00"> (1001ms)</span>
+  <span style="color:#0A0">  ✓</span><span style="color:#555"> works A</span><span style="color:#A00"> (1000ms)</span>
+  <span style="color:#0A0">  ✓</span><span style="color:#555"> works B</span><span style="color:#A00"> (1000ms)</span>
   <span style="color:#0A0">  ✓</span><span style="color:#555"> works C</span><span style="color:#A00"> (1000ms)</span>
   <span style="color:#0AA">  - skips D</span>
 hello &lt;there&gt;!
