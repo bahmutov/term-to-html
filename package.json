@@ -1,0 +1,39 @@
+{
+  "name": "term-to-html",
+  "version": "1.0.0",
+  "description": "Stream terminal output with ansi codes into nicely formatted HTML",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bahmutov/term-to-html.git"
+  },
+  "files": [
+    "bin",
+    "index.js"
+  ],
+  "bin": {
+    "term-to-html": "bin/term-to-html.js"
+  },
+  "keywords": [
+    "cli",
+    "terminal",
+    "ansi",
+    "html"
+  ],
+  "author": "Gleb Bahmutov <gleb.bahmutov@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bahmutov/term-to-html/issues"
+  },
+  "homepage": "https://github.com/bahmutov/term-to-html#readme",
+  "devDependencies": {
+    "prettier": "1.19.1"
+  },
+  "dependencies": {
+    "ansi-to-html": "0.6.14",
+    "escape-html": "1.0.3"
+  }
+}
