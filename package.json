@@ -32,7 +32,8 @@
   "devDependencies": {
     "cli-table3": "0.5.1",
     "mocha": "7.0.1",
-    "prettier": "1.19.1"
+    "prettier": "1.19.1",
+    "snap-shot-it": "7.9.2"
   },
   "dependencies": {
     "ansi-to-html": "0.6.14",

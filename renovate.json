@@ -1,0 +1,25 @@
+{
+  "extends": [
+    "config:base"
+  ],
+  "automerge": true,
+  "prConcurrentLimit": 3,
+  "prHourlyLimit": 2,
+  "rangeStrategy": "pin",
+  "schedule": [
+    "after 10pm and before 5am on every weekday",
+    "every weekend"
+  ],
+  "updateNotScheduled": false,
+  "timezone": "America/New_York",
+  "lockFileMaintenance": {
+    "enabled": true
+  },
+  "separatePatchReleases": true,
+  "separateMultipleMajor": true,
+  "masterIssue": true,
+  "labels": [
+    "type: dependencies",
+    "renovate"
+  ]
+}
