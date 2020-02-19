@@ -13,6 +13,8 @@ const termToHtml = options => {
           font-family: "Courier New", Courier, monospace;
           padding: 0 1em;
           line-height: 1.4;
+          color: ${options.fg};
+          background-color: ${options.bg};
         }
         pre {
           padding: 0 0;
