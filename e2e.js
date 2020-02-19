@@ -8,7 +8,11 @@ it('works', () => {
     },
   }).then(result => {
     // replace Mocha's time duration warnings with same value
-    const text = result.stdout.replace(/\(10\d\dms\)/g, '(1000ms)')
+    const duration1xxx = /\(10\d\dms\)/g
+    const duration9xx = /\(9\d\dms\)/g
+    const text = result.stdout
+      .replace(duration1xxx, '(1000ms)')
+      .replace(duration9xx, '(1000ms)')
     snapshot('generated html', text)
   })
 })
