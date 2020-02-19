@@ -21,6 +21,14 @@ mocha spec.js --reporter spec | term-to-html > mocha.html
 
 **Note:** many applications detect non-interactive terminal and turn off colors. Usually you can enable colors using an environment variable, like `FORCE_COLOR=2` in [chalk](https://github.com/chalk/chalk) library.
 
+### Dark theme
+
+You can output HTML page with dark background using `--theme dark` CLI argument
+
+```shell
+<my program> | term-to-html --theme dark
+```
+
 ## Testing
 
 There are [E2E tests](e2e.js) and you can observe the output by running
