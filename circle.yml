@@ -8,9 +8,17 @@ jobs:
       - node/with-cache:
           steps:
             - run: npm ci
-      - run: FORCE_COLOR=2 npx mocha spec.js --reporter spec | bin/term-to-html.js > mocha.html
+
+      - run:
+          command: FORCE_COLOR=2 npx mocha spec.js --reporter spec | bin/term-to-html.js > mocha.html
+          name: example page
       - store_artifacts:
           path: mocha.html
+      - run:
+          command: FORCE_COLOR=2 npx mocha spec.js --reporter spec | bin/term-to-html.js --theme dark > mocha-dark.html
+          name: example dark page
+      - store_artifacts:
+          path: mocha-dark.html
       - run: npm run e2e
       - run: npm run semantic-release
 orbs:
