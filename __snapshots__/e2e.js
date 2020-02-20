@@ -95,3 +95,28 @@ hello &lt;there&gt;!
 
 </pre></body></html>
 `
+
+exports['string to string dark theme'] = `
+<!DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="utf-8" />
+      <style>
+        body {
+          font-family: "Courier New", Courier, monospace;
+          padding: 0 1em;
+          line-height: 1.4;
+          color: #eee;
+          background-color: #000;
+        }
+        pre {
+          padding: 0 0;
+          margin: 0 0;
+          font-family: "Courier New", Courier, monospace;
+        }
+      </style>
+    </head>
+    <body><pre><span style="color:#A00">red<span style="color:#eee"> <span style="color:#0AA">cyan<span style="color:#eee">
+second line</span></span></span></span>
+</pre></body></html>
+`

@@ -13,9 +13,7 @@ const darkTheme = {
   fg: '#eee',
 }
 
-const termToHtmlStream = options => {
-  const convert = new AnsiToHtml(options)
-
+const getHtmlStart = options => {
   const start = `<!DOCTYPE html>
     <html>
     <head>
@@ -37,7 +35,15 @@ const termToHtmlStream = options => {
     </head>
     <body><pre>\n
   `
+  return start
+}
 
+const htmlEnd = '\n</pre></body></html>'
+
+const streams = options => {
+  const convert = new AnsiToHtml(options)
+
+  const start = getHtmlStart(options)
   console.log(start)
 
   process.stdin.setEncoding('utf8')
@@ -45,12 +51,21 @@ const termToHtmlStream = options => {
     return process.stdout.write(convert.toHtml(escape(chunk)))
   })
   process.stdin.on('end', () => {
-    console.log('\n</pre></body></html>')
+    console.log(htmlEnd)
   })
 }
 
+const strings = (s, theme = 'dark') => {
+  const options = theme === 'dark' ? darkTheme : lightTheme
+  const htmlStart = getHtmlStart(options)
+  const convert = new AnsiToHtml(options)
+  const converted = convert.toHtml(escape(s))
+  return htmlStart.trim() + converted + htmlEnd
+}
+
 module.exports = {
-  termToHtmlStream,
+  streams,
+  strings,
   themes: {
     light: lightTheme,
     dark: darkTheme,

@@ -1,5 +1,7 @@
 const execa = require('execa')
 const snapshot = require('snap-shot-it')
+const chalk = require('chalk')
+const termToHtml = require('.')
 
 /**
  * Replace Mocha's time duration warnings with same value
@@ -38,4 +40,11 @@ it('supports dark theme', () => {
     const text = sanitize(result.stdout)
     snapshot('html with dark theme', text)
   })
+})
+
+it('can be used as a module', () => {
+  const ansi =
+    chalk.red('red') + ' ' + chalk.cyan('cyan') + '\n' + 'second line'
+  const html = termToHtml.strings(ansi)
+  snapshot('string to string dark theme', html)
 })

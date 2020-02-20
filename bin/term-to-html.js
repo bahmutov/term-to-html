@@ -9,8 +9,8 @@ const args = arg({
   '--theme': String,
 })
 
-const { termToHtmlStream, themes } = require('..')
+const { streams, themes } = require('..')
 
 const options = args['--theme'] === 'dark' ? themes.dark : themes.light
 
-termToHtmlStream(options)
+streams(options)
