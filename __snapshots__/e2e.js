@@ -120,3 +120,18 @@ exports['string to string dark theme'] = `
 second line</span></span></span></span>
 </pre></body></html>
 `
+
+exports['themes'] = {
+  "light": {
+    "newline": false,
+    "bg": "#fff",
+    "fg": "#111",
+    "name": "light"
+  },
+  "dark": {
+    "newline": false,
+    "bg": "#000",
+    "fg": "#eee",
+    "name": "dark"
+  }
+}

@@ -48,3 +48,7 @@ it('can be used as a module', () => {
   const html = termToHtml.strings(ansi)
   snapshot('string to string dark theme', html)
 })
+
+it('has themes', () => {
+  snapshot('themes', termToHtml.themes)
+})

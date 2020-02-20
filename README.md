@@ -29,6 +29,13 @@ You can output HTML page with dark background using `--theme dark` CLI argument
 <my program> | term-to-html --theme dark
 ```
 
+### Use as a module
+
+```js
+const termToHtml = require('term-to-html')
+const html = termToHtml.strings(stringWithAnsi, termToHtml.themes.dark.name)
+```
+
 ## Testing
 
 There are [E2E tests](e2e.js) and you can observe the output by running

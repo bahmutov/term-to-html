@@ -5,12 +5,14 @@ const lightTheme = {
   newline: false,
   bg: '#fff',
   fg: '#111',
+  name: 'light',
 }
 
 const darkTheme = {
   newline: false,
   bg: '#000',
   fg: '#eee',
+  name: 'dark',
 }
 
 const getHtmlStart = options => {
