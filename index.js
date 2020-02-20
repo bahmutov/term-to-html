@@ -1,7 +1,19 @@
 const AnsiToHtml = require('ansi-to-html')
 const escape = require('escape-html')
 
-const termToHtml = options => {
+const lightTheme = {
+  newline: false,
+  bg: '#fff',
+  fg: '#111',
+}
+
+const darkTheme = {
+  newline: false,
+  bg: '#000',
+  fg: '#eee',
+}
+
+const termToHtmlStream = options => {
   const convert = new AnsiToHtml(options)
 
   const start = `<!DOCTYPE html>
@@ -37,4 +49,10 @@ const termToHtml = options => {
   })
 }
 
-module.exports = { termToHtml }
+module.exports = {
+  termToHtmlStream,
+  themes: {
+    light: lightTheme,
+    dark: darkTheme,
+  },
+}

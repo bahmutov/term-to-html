@@ -9,19 +9,8 @@ const args = arg({
   '--theme': String,
 })
 
-const lightTheme = {
-  newline: false,
-  bg: '#fff',
-  fg: '#111',
-}
+const { termToHtmlStream, themes } = require('..')
 
-const darkTheme = {
-  newline: false,
-  bg: '#000',
-  fg: '#eee',
-}
+const options = args['--theme'] === 'dark' ? themes.dark : themes.light
 
-const options = args['--theme'] === 'dark' ? darkTheme : lightTheme
-
-const { termToHtml } = require('..')
-termToHtml(options)
+termToHtmlStream(options)
