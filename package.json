@@ -38,7 +38,7 @@
     "mocha": "7.1.0",
     "prettier": "1.19.1",
     "semantic-release": "17.0.4",
-    "snap-shot-it": "7.9.2"
+    "snap-shot-it": "7.9.3"
   },
   "dependencies": {
     "ansi-to-html": "0.6.14",
