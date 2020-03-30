@@ -12,7 +12,9 @@ jobs:
       - checkout
       - node/with-cache:
           steps:
-            - run: npm ci 📦
+            - run:
+                command: npm ci
+                name: install dependencies 📦
       - run:
           command: FORCE_COLOR=2 npx mocha spec.js --reporter spec | bin/term-to-html.js > mocha.html
           name: example page 📊
