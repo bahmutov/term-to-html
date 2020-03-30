@@ -13,8 +13,8 @@ jobs:
       - node/with-cache:
           steps:
             - run:
-                command: npm ci
                 name: install dependencies 📦
+                command: npm ci
       - run:
           command: FORCE_COLOR=2 npx mocha spec.js --reporter spec | bin/term-to-html.js > mocha.html
           name: example page 📊
@@ -25,5 +25,9 @@ jobs:
           name: example dark page 📊
       - store_artifacts:
           path: mocha-dark.html
-      - run: npm run e2e 🧪
-      - run: npm run semantic-release 🚀
+      - run:
+          name: run tests 🧪
+          command: npm run e2e
+      - run:
+          name: NPM publish 🚀
+          command: npm run semantic-release
