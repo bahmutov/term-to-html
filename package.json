@@ -35,7 +35,7 @@
     "chalk": "4.1.0",
     "cli-table3": "0.6.0",
     "execa": "4.0.3",
-    "mocha": "8.1.0",
+    "mocha": "8.1.1",
     "prettier": "2.0.5",
     "semantic-release": "17.1.1",
     "snap-shot-it": "7.9.3"
