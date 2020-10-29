@@ -34,7 +34,7 @@
   "devDependencies": {
     "chalk": "4.1.0",
     "cli-table3": "0.6.0",
-    "execa": "4.0.3",
+    "execa": "4.1.0",
     "mocha": "8.2.0",
     "prettier": "2.1.2",
     "semantic-release": "17.2.1",
