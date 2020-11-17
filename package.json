@@ -37,7 +37,7 @@
     "execa": "4.1.0",
     "mocha": "8.2.1",
     "prettier": "2.1.2",
-    "semantic-release": "17.2.2",
+    "semantic-release": "17.2.3",
     "snap-shot-it": "7.9.3"
   },
   "dependencies": {
