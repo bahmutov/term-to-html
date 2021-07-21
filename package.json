@@ -41,7 +41,7 @@
     "snap-shot-it": "7.9.6"
   },
   "dependencies": {
-    "ansi-to-html": "0.7.0",
+    "ansi-to-html": "0.7.1",
     "arg": "5.0.0",
     "escape-html": "1.0.3"
   }
